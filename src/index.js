@@ -11,7 +11,6 @@ ReactDOM.render(
 
 let index = 0;
 let changing = (dex) => {
-  console.log(index);
   if(dex%2 === 1){
     document.getElementById('changeling').innerHTML = 
     `<div id='center'>Look At Me</div>`
@@ -25,4 +24,4 @@ let changing = (dex) => {
 changing(index);
 window.setInterval(()=>{
   changing(index++);
-}, 500);
+}, 2000);
