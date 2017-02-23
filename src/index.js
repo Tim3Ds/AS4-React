@@ -1,11 +1,19 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import App from './App';
+import About from './About';
 import './index.css';
+// using an ES6 transpiler, like babel
+import { Router, Route, Link } from 'react-router';
 
 
-ReactDOM.render(
-  <App />,
+render(
+  (
+  <Router App={Link}>
+    <Route path="/" component={App}/>
+    <Route path="/About" component={About}/>
+  </Router>
+  ),
   document.getElementById('root')
 );
 

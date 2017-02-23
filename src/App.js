@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router';
 import logo from './logo.svg';
 import './App.css';
 
-
-
-class App extends Component {
+export default React.createClass({
   render() {
     return (
       <div className="App">
@@ -17,9 +16,8 @@ class App extends Component {
           An app Demonstrating an implamentation of node.
         </p>
         <span id='changeling'></span>
+        <Link to="/about">About</Link>
       </div>
-    );
+    )
   }
-}
-
-export default App;
+});
