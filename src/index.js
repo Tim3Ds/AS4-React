@@ -1,17 +1,19 @@
 import React from 'react';
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom';
 import App from './App';
 import About from './About';
 import './index.css';
 // using an ES6 transpiler, like babel
-import { Router, Route, Link } from 'react-router';
+import { Router, Route, browserHistory } from 'react-router';
 
-
-render(
+ReactDOM.render(
   (
-  <Router App={Link}>
-    <Route path="/" component={App}/>
-    <Route path="/About" component={About}/>
+    //<App />
+    //<About />
+  <Router history={browserHistory}>
+   <Route path="/" component={App}>
+     <Route path="/About" component={About}/>
+   </Route>
   </Router>
   ),
   document.getElementById('root')

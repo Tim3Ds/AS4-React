@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 import logo from './logo.svg';
 import './App.css';
 
-export default React.createClass({
+class App extends Component {
   render() {
     return (
       <div className="App">
@@ -11,13 +11,16 @@ export default React.createClass({
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome to React</h2>
         </div>
+        <h1>Hello World</h1>
         <p className="App-intro">
-          <h1>Hello World</h1>
           An app Demonstrating an implamentation of node.
         </p>
+        <Link to="/">Home</Link>
         <span id='changeling'></span>
-        <Link to="/about">About</Link>
+        <Link to="/About">About </Link>
       </div>
     )
   }
-});
+};
+
+export default App;
